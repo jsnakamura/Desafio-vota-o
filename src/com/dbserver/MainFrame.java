@@ -24,8 +24,9 @@ public class MainFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                Voter newVotingForm = new Voter();
-                newVotingForm.votinPanel();
+                VoteFrame newVoteForm = new VoteFrame();
+                newVoteForm.votingForm();
+
             }
         });
 
