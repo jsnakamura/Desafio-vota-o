@@ -8,17 +8,18 @@ public class Vote {
     private float hora;
 
 
-    public Vote(String name, String restaurant) {
+    public Vote(String name, String restaurant, float data, float hora) {
         this.name = name;
         this.restaurant = restaurant;
+        this.data = data;
+        this.hora = hora;
     }
 
-    public String getName() {
-        return this.name;
-    }
+    public String getName() { return this.name; }
 
-    public String getRestaurant() {
-        return restaurant;
-    }
+    public String getRestaurant() { return restaurant; }
 
+    public float getData() { return data; }
+
+    public float getHora() { return hora; }
 }
