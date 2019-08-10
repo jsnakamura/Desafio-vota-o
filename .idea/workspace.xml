@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe30b7d3-cf84-4085-80c8-a143b3db677b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/dbserver/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dbserver/Selector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dbserver/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dbserver/Vote.java" afterDir="false" />
-    </list>
+    <list default="true" id="fe30b7d3-cf84-4085-80c8-a143b3db677b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -218,7 +215,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -226,9 +222,9 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053823" side_tool="true" visible="true" weight="0.17125382" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053823" side_tool="true" visible="true" weight="0.15188584" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994618" visible="true" weight="0.17125382" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994618" weight="0.17125382" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
