@@ -1,25 +1,28 @@
 package com.dbserver;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class Vote {
 
-    private String name = new String();
-    private String restaurant = new String();
-    private float data;
-    private float hora;
+    private String name;
+    private String restaurant;
+    private LocalDate data;
+    private LocalTime time;
 
 
-    public Vote(String name, String restaurant, float data, float hora) {
+    public Vote(String name, String restaurant, LocalDate data, LocalTime time) {
         this.name = name;
         this.restaurant = restaurant;
         this.data = data;
-        this.hora = hora;
+        this.time = time;
     }
 
     public String getName() { return this.name; }
 
     public String getRestaurant() { return restaurant; }
 
-    public float getData() { return data; }
+    public LocalDate getData() { return data; }
 
-    public float getHora() { return hora; }
+    public LocalTime getTime() { return time; }
 }
