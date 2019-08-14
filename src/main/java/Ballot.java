@@ -17,4 +17,6 @@ public class Ballot {
     public int getVotes_number() { return votes_number;}
 
     public void setVotes_number(int votes_number) { this.votes_number = votes_number; }
+
+    public void increment() { votes_number += 1; }
 }

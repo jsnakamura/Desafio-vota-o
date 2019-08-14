@@ -61,10 +61,8 @@ public class Selector {
 
                         flag = 1;
 
-                        value = jBallotIT.getVotes_number();
-                        value = value + 1;
+                        jBallotIT.increment();
 
-                        jBallotIT.setVotes_number(value);
                     }
 
                 if(flag == 0)
@@ -101,10 +99,9 @@ public class Selector {
     public int newVote(String name, String restaurant)
     {
 
-
-        for(String iterator : Winners)
+        for(String winner : Winners)
         {
-            if(iterator.equals(restaurant))
+            if(winner.equals(restaurant))
                 return REPEATED_VOTE;
         }
 
@@ -154,17 +151,4 @@ public class Selector {
         return Winners;
     }
 
-    // Seta o arraylist de votos caso haja uma lista antiga
-    public void setVote(ArrayList<Ballot> Voting)
-    {
-        this.Votes = Voting;
-    }
-
-    // ISSO AQUI VAI NO CONTROLADOR DE DADOS
-
-    public ArrayList<Ballot> readOldVotes()
-    {
-
-        return Votes;
-    }
 }
