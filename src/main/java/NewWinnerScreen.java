@@ -1,9 +1,6 @@
-import java.util.Scanner;
-
 public class NewWinnerScreen {
 
     private Selector  votes;
-    private String[] oldwinner;
     private Printer write;
     private String newWinner;
 
@@ -17,11 +14,17 @@ public class NewWinnerScreen {
     {
         newWinner = votes.mostVoted();
 
+        votes.pushQueue(newWinner);
+
+        votes.cleanList();
+
         return newWinner;
     }
 
+    public String[] getOldwinner() { return votes.getWinners(); }
+
     public void setWinners(String[] winner) {
-        this.oldwinner = winner;
+        votes.setWinners(winner);
     }
 
     public void setVotes(Selector oldVotes)

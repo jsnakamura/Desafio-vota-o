@@ -15,4 +15,18 @@ public class BallotTest {
         //Then
         assertEquals(5,ballot.getVotes_number());
     }
+
+    @Test
+    public void increment()
+    {
+        //Given
+        Ballot ballot = new Ballot("Juliano", "Sakaes");
+
+        //When
+        ballot.setVotes_number(5);
+        ballot.increment();
+
+        //THen
+        assertEquals(6, ballot.getVotes_number());
+    }
 }

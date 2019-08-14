@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void clearScreen()
@@ -22,86 +20,33 @@ public class Main {
         String[] oldwinners = new String[7];
         String Option;
 
-        int i, j, k;
-        int num;
-        String voted;
-        String[] voteds = new String[7];
-
         /*------------------------------*/
 
+        /*  Selector constructor  */
         votingBox.Selector();
-
-
-
-        num = votingBox.cleanList();
-
-        i = votingBox.newVote("Juliano", "Sakaes");
-
-        j = votingBox.newVote("Luiza", "Sakura");
-
-        k = votingBox.newVote("Gui", "Sakura");
-
-        k = votingBox.newVote("go", "kat");
-
-        k = votingBox.newVote("Gu", "mix");
-
-        k = votingBox.newVote("ui", "MOZ");
-
-        k = votingBox.newVote("u", "fever");
-
-
-        voted = votingBox.mostVoted();
-
-
-        votingBox.pushQueue(voted);
-
-        votingBox.pushQueue("1");
-        votingBox.pushQueue("2");
-        votingBox.pushQueue("3");
-        votingBox.pushQueue(voted);
-        votingBox.pushQueue("4");
-        votingBox.pushQueue("5");
-
-
-
-        voteds = votingBox.getWinners();
-
-        for(int a = 0; a < 7; a++)
-        {
-            System.out.println(voteds[a] + " " + (a+1));
-        }
-
-
-        //System.out.println(num);
-
-        System.out.println();
-        write.print("mais votado:");
-
-        System.out.println(voted);
 
 
         //   Begin true main logic
         while(true)
         {
-
-            clearScreen();
-            write.print("Type your option (New vote, Winner,  Exit): ");
+            write.print("Type your option (New vote, Winner, Help, Exit): ");
             Option = rdline.read();
 
             switch (Option) {
                 case "New vote":
 
                     voteScreen.setVotes(votingBox);
+                    int flag = voteScreen.createVote();
 
-                    if(voteScreen.createVote() == -1)
+                    if(flag == -1)
                     {
-                        write.print("You have successfully voted!");
                         votingBox = voteScreen.getVotes();
+                        write.print("You have successfully voted!");
                     }
-                    else if(voteScreen.createVote() == 2) {
+                    else if(flag == 2) {
                         write.print("You can't vote for this restaurant!");
                     }
-                    else if (voteScreen.createVote() == 3) {
+                    else if (flag == 3) {
                         write.print("You have already voted!");
                     }
 
@@ -109,19 +54,40 @@ public class Main {
 
                 case "Winner":
 
+                    String win;
+
                     winnnerScreen.setWinners(oldwinners);
+
                     winnnerScreen.setVotes(votingBox);
-                    write.print("The winner is: ");
-                    write.print(winnnerScreen.getWinner());
+
+                    win = winnnerScreen.getWinner();
+
+                    oldwinners = winnnerScreen.getOldwinner();
+
+
+                    if(win == "") {
+                        write.print("There were no votes for this election!");
+                    }
+                    else {
+                        write.print("The winner is: ");
+                        write.print(win);
+                    }
 
                     break;
 
-                case "":
+                case "Help":
+                    write.print("New vote: Type your name and the restaurant of your choice. You can't vote twice per election. You can't vote in a restaurant that won in the last 7 elections.");
+                    write.print("Winner: Show the election winner. Reset for a new election.");
+                    write.print("Exit: Exit the election.");
                     break;
 
                 case "Exit":
-                    write.print("");
+                    write.print("Good Bye");
                     System.exit(0);
+                    break;
+
+                default:
+                    write.print("Choose a valid option!");
                     break;
             }
         }

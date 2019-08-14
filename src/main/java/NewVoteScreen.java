@@ -1,18 +1,12 @@
-import java.util.Scanner;
-
 public class NewVoteScreen {
 
     private Selector  Votes;
     private Printer write;
     private Reader rdline;
 
-    Scanner read;
-
-
     public NewVoteScreen(Selector oldVotes)
     {
         Votes = oldVotes;
-        read = new Scanner(System.in);
         write = new Printer();
         rdline = new Reader();
     }

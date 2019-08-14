@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class Selector {
@@ -24,8 +25,6 @@ public class Selector {
         Votes = new ArrayList<>();
         Winners = new String[7];
 
-
-        //CUIDAR AQUI POIS DEVE SER FEITO NO MAIN
         for(int i = 0; i < 7; i++)
         {
             Winners[i] = "";
@@ -99,18 +98,12 @@ public class Selector {
     public int newVote(String name, String restaurant)
     {
 
-        for(String winner : Winners)
-        {
-            if(winner.equals(restaurant))
-                return REPEATED_VOTE;
-        }
+        if(!verifyRestaurant(restaurant))
+            return REPEATED_VOTE;
 
-        for(Ballot iterator : Votes)
-        {
-            if(iterator.getName().equals(name))
-                return REPEATED_VOTER;
+        if(!verifyName(name))
+            return REPEATED_VOTER;
 
-        }
 
         Ballot ballot = new Ballot(name, restaurant);
         Votes.add(ballot);
@@ -119,9 +112,23 @@ public class Selector {
     }
 
     //DONE
-    public ArrayList<Ballot> getVotes()
+    public boolean verifyRestaurant(String restaurant)
     {
-        return Votes;
+        for(String winner : Winners)
+            if (Objects.equals(winner, restaurant))
+                return false;
+
+        return true;
+    }
+
+    //DONE
+    public boolean verifyName(String name)
+    {
+        for(Ballot eachvote : Votes)
+            if (Objects.equals(eachvote.getName(), name))
+                return false;
+
+        return true;
     }
 
     //DONE
