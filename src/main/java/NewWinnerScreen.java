@@ -4,9 +4,9 @@ public class NewWinnerScreen {
     private Printer printer;
     private String newWinner;
 
-    public NewWinnerScreen(Selector oldVotes)
+    public NewWinnerScreen(Selector selector)
     {
-        selector = oldVotes;
+        this.selector = selector;
         printer = new Printer();
     }
 
@@ -23,13 +23,12 @@ public class NewWinnerScreen {
 
     public String[] getOldwinner() { return selector.getWinners(); }
 
-    public void setWinners(String[] winner) {
-        selector.setWinners(winner);
+    public void setWinners(String[] winners) {
+        selector.setWinners(winners);
     }
 
-    public void setVotes(Selector oldVotes)
+    public void setVotes(Selector selector)
     {
-        selector = oldVotes;
+        this.selector = selector;
     }
-
 }

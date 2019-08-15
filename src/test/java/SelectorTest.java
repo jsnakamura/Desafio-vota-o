@@ -27,7 +27,6 @@ public class SelectorTest {
 
         //Then
         assertArrayEquals(test2, selector.getWinners());
-
     }
 
     @Test
@@ -50,6 +49,56 @@ public class SelectorTest {
     }
 
     @Test
+    public void pushQueue() {
+        //Given
+        Selector selector = new Selector();
+        String[] winners = {"titi", "tata", "Hello", "Ok", "Sakaes", "Enodo", ""};
+        String[] test = {"Hi", "titi", "tata", "Hello", "Ok", "Sakaes", "Enodo"};
+
+        //When
+        selector.Selector();
+        selector.setWinners(winners);
+
+        selector.pushQueue("Hi");
+
+        //Then
+        assertArrayEquals(test, selector.getWinners());
+
+    }
+
+    @Test
+    public void verifyRestaurant() {
+        //Given
+        Selector selector = new Selector();
+        String[] test = {"titi", "tata", "Hello", "Ok", "Sakaes", "Enodo", ""};
+
+        //When
+        selector.Selector();
+        selector.setWinners(test);
+
+        //Then
+        assertEquals(true, selector.verifyRestaurant("Sakaes"));
+        assertEquals(false, selector.verifyRestaurant("Hi"));
+    }
+
+    @Test
+    public void verifyName() {
+        //Given
+        Selector selector = new Selector();
+
+        //When
+        selector.Selector();
+
+        selector.newVote("Juliano", "Sakaes");
+        selector.newVote("Lu", "Sakaes");
+        selector.newVote("Gui", "Sakaes");
+
+        //Then
+        assertEquals(true, selector.verifyName("Juliano"));
+        assertEquals(false, selector.verifyName("Carlos"));
+    }
+
+    @Test
     public void mostVoted() {
         //Given
         Selector selector = new Selector();
@@ -57,28 +106,16 @@ public class SelectorTest {
         //When
         selector.Selector();
 
+        selector.newVote("Juliano", "ko");
+        selector.newVote("Lu", "Sakaes");
+        selector.newVote("jo", "Alien");
+        selector.newVote("Gui", "Sakura");
+        selector.newVote("Shinji", "Alien");
+        selector.newVote("Choi", "Sakura");
+
 
         //Then
-    }
+        assertEquals("Alien", selector.mostVoted());
 
-    @Test
-    public void pushQueue() {
-        //Given
-        //When
-        //Then
-    }
-
-    @Test
-    public void verifyRestaurant() {
-        //Given
-        //When
-        //Then
-    }
-
-    @Test
-    public void verifyName() {
-        //Given
-        //When
-        //Then
     }
 }

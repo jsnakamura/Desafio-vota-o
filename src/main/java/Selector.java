@@ -9,6 +9,7 @@ public class Selector {
     private static final int REPEATED_VOTE = 2;
     private static final int REPEATED_VOTER = 3;
     private static final int NO_VOTES = 4;
+    private static final int MAX_QUEUE = 7;
 
     private String[] winners;
 
@@ -19,9 +20,9 @@ public class Selector {
     public void Selector()
     {
         Votes = new ArrayList<>();
-        winners = new String[7];
+        winners = new String[MAX_QUEUE];
 
-        for(int i = 0; i < 7; i++)
+        for(int i = 0; i < MAX_QUEUE; i++)
         {
             winners[i] = "";
         }
@@ -95,10 +96,10 @@ public class Selector {
     public int newVote(String name, String restaurant)
     {
 
-        if(!verifyName(name))
+        if(verifyName(name))
             return REPEATED_VOTER;
 
-        if(!verifyRestaurant(restaurant)) {
+        if(verifyRestaurant(restaurant)) {
             return REPEATED_VOTE;
         }
 
@@ -113,9 +114,9 @@ public class Selector {
     {
         for(String winner : winners)
             if (Objects.equals(winner, restaurant))
-                return false;
+                return true;
 
-        return true;
+        return false;
     }
 
     //DONE
@@ -123,23 +124,20 @@ public class Selector {
     {
         for(Ballot eachvote : Votes)
             if (Objects.equals(eachvote.getName(), name))
-                return false;
+                return true;
 
-        return true;
+        return false;
     }
 
     //DONE
     public void pushQueue(String pusher)
     {
-        for(int j = 0; j < 7; j++)
+        for(int j = MAX_QUEUE - 1; j > 0; j--)
         {
-            winners[j] = pusher;
-
-            if(j+1 == 7 )
-                break;
-            else
-                pusher = winners[j+1];
+            winners[j] = winners[j-1];
         }
+
+        winners[0] = pusher;
     }
 
     //DONE
