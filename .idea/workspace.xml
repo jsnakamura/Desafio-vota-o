@@ -3,11 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b2a5932b-e21a-483f-a7de-bdd500cf0de4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ballot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ballot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/NewVoteScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NewVoteScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/NewWinnerScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NewWinnerScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Printer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Selector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BallotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BallotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SelectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SelectorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -24,13 +27,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1043">
-              <caret line="83" column="28" lean-forward="true" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
+            <state relative-caret-position="387">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -38,8 +51,8 @@
       <file leaf-file-name="NewWinnerScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/NewWinnerScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="544">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="e#584#585#0" expanded="true" />
                 <element signature="e#618#619#0" expanded="true" />
@@ -51,8 +64,8 @@
       <file leaf-file-name="NewVoteScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/NewVoteScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="238">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -60,8 +73,22 @@
       <file leaf-file-name="Selector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Selector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-181">
-              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="250">
+              <caret line="111" column="23" lean-forward="true" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2737#2738#0" expanded="true" />
+                <element signature="e#2770#2771#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectorTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SelectorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="81" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,47 +96,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Reader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Printer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Printer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ballot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Ballot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SelectorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BallotTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BallotTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/BallotTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+            <state relative-caret-position="493">
+              <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -349,15 +343,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/FileHandler.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SelectorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Printer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Ballot.java" />
         <option value="$PROJECT_DIR$/src/main/java/Reader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Printer.java" />
         <option value="$PROJECT_DIR$/src/main/java/NewVoteScreen.java" />
         <option value="$PROJECT_DIR$/src/main/java/NewWinnerScreen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Selector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Ballot.java" />
         <option value="$PROJECT_DIR$/src/test/java/BallotTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Selector.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SelectorTest.java" />
       </list>
     </option>
   </component>
@@ -453,7 +447,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.SelectorTest">
+  <component name="RunManager" selected="Gradle.SelectorTest.setWinners">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Desafio_main" />
@@ -462,30 +456,12 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="BallotTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BallotTest.setVotes_number" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests BallotTest" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="BallotTest.increment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BallotTest.increment&quot;" />
+        <option name="scriptParameters" value="--tests &quot;BallotTest.setVotes_number&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -516,22 +492,41 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
     </configuration>
-    <configuration name="BallotTest.setVotes_number" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Desafio_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BallotTest" />
-      <option name="METHOD_NAME" value="setVotes_number" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+    <configuration name="SelectorTest.newVote" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;SelectorTest.newVote&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+    </configuration>
+    <configuration name="SelectorTest.setWinners" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;SelectorTest.setWinners&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -572,19 +567,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.BallotTest.setVotes_number" />
-      <item itemvalue="Gradle.BallotTest.increment" />
-      <item itemvalue="Gradle.BallotTest" />
       <item itemvalue="Gradle.SelectorTest" />
+      <item itemvalue="Gradle.SelectorTest.newVote" />
+      <item itemvalue="Gradle.SelectorTest.setWinners" />
+      <item itemvalue="Gradle.BallotTest.setVotes_number" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SelectorTest" />
-        <item itemvalue="Gradle.BallotTest" />
-        <item itemvalue="Gradle.BallotTest.increment" />
-        <item itemvalue="JUnit.BallotTest.setVotes_number" />
+        <item itemvalue="Gradle.SelectorTest.setWinners" />
+        <item itemvalue="Gradle.SelectorTest.newVote" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.SelectorTest" />
+        <item itemvalue="Gradle.BallotTest.setVotes_number" />
       </list>
     </recent_temporary>
   </component>
@@ -602,17 +597,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BallotTest_setVotes_number - 2019.08.13 at 21h 58m 01s.xml">
-      <configuration name="BallotTest.setVotes_number" configurationId="JUnit" />
+    <history-entry file="SelectorTest_newVote - 2019.08.15 at 00h 47m 34s.xml">
+      <configuration name="SelectorTest.newVote" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="BallotTest_setVotes_number - 2019.08.14 at 01h 57m 15s.xml">
-      <configuration name="BallotTest.setVotes_number" configurationId="JUnit" />
+    <history-entry file="SelectorTest_newVote - 2019.08.15 at 00h 48m 10s.xml">
+      <configuration name="SelectorTest.newVote" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="BallotTest_setVotes_number - 2019.08.14 at 02h 47m 08s.xml">
-      <configuration name="BallotTest.setVotes_number" configurationId="JUnit" />
+    <history-entry file="SelectorTest_newVote - 2019.08.15 at 00h 57m 38s.xml">
+      <configuration name="SelectorTest.newVote" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="BallotTest_setVotes_number - 2019.08.14 at 02h 47m 23s.xml">
-      <configuration name="BallotTest.setVotes_number" configurationId="JUnit" />
+    <history-entry file="SelectorTest_newVote - 2019.08.15 at 00h 57m 52s.xml">
+      <configuration name="SelectorTest.newVote" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SelectorTest_setWinners - 2019.08.15 at 00h 58m 44s.xml">
+      <configuration name="SelectorTest.setWinners" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SelectorTest_setWinners - 2019.08.15 at 00h 58m 49s.xml">
+      <configuration name="SelectorTest.setWinners" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SelectorTest_setWinners - 2019.08.15 at 01h 00m 25s.xml">
+      <configuration name="SelectorTest.setWinners" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SelectorTest_setWinners - 2019.08.15 at 01h 02m 34s.xml">
+      <configuration name="SelectorTest.setWinners" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SelectorTest_setWinners - 2019.08.15 at 01h 03m 52s.xml">
+      <configuration name="SelectorTest.setWinners" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SelectorTest_setWinners - 2019.08.15 at 01h 06m 00s.xml">
+      <configuration name="SelectorTest.setWinners" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -621,24 +634,26 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32925585" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.1753313" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2517839" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26299694" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12809473" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12809473" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.17940877" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -646,7 +661,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.13965341" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -714,6 +728,8 @@
           <caret line="132" column="24" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2737#2738#0" expanded="true" />
+            <element signature="e#2770#2771#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -835,20 +851,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Ballot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1043">
-          <caret line="83" column="28" lean-forward="true" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Selector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -861,22 +867,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="136">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/NewVoteScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/NewWinnerScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="544">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#584#585#0" expanded="true" />
             <element signature="e#618#619#0" expanded="true" />
@@ -884,24 +890,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Ballot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="387">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SelectorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Selector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="250">
+          <caret line="111" column="23" lean-forward="true" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2737#2738#0" expanded="true" />
+            <element signature="e#2770#2771#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BallotTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+        <state relative-caret-position="493">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SelectorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="81" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

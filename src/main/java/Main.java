@@ -1,21 +1,16 @@
 public class Main {
 
-    public static void clearScreen()
-    {
-        for(int tmp = 0; tmp < 50; tmp ++)
-            System.out.println();
-    }
 
     public static void main(String[] args) {
 
 
         /*-----------variables----------*/
 
-        Selector votingBox = new Selector();
+        Selector selector = new Selector();
         Printer write = new Printer();
         Reader rdline = new Reader();
-        NewVoteScreen voteScreen = new NewVoteScreen(votingBox);
-        NewWinnerScreen winnnerScreen = new NewWinnerScreen(votingBox);
+        NewVoteScreen voteScreen = new NewVoteScreen(selector);
+        NewWinnerScreen winnnerScreen = new NewWinnerScreen(selector);
 
         String[] oldwinners = new String[7];
         String Option;
@@ -23,7 +18,15 @@ public class Main {
         /*------------------------------*/
 
         /*  Selector constructor  */
-        votingBox.Selector();
+        selector.Selector();
+
+//        for(int i = 0; i < 7; i++)
+//        {
+//            oldwinners[i] = "";
+//        }
+
+//        selector.setWinners(oldwinners);
+
 
 
         //   Begin true main logic
@@ -35,12 +38,12 @@ public class Main {
             switch (Option) {
                 case "New vote":
 
-                    voteScreen.setVotes(votingBox);
+                    voteScreen.setVotes(selector);
                     int flag = voteScreen.createVote();
 
                     if(flag == -1)
                     {
-                        votingBox = voteScreen.getVotes();
+                        selector = voteScreen.getVotes();
                         write.print("You have successfully voted!");
                     }
                     else if(flag == 2) {
@@ -58,7 +61,7 @@ public class Main {
 
                     winnnerScreen.setWinners(oldwinners);
 
-                    winnnerScreen.setVotes(votingBox);
+                    winnnerScreen.setVotes(selector);
 
                     win = winnnerScreen.getWinner();
 

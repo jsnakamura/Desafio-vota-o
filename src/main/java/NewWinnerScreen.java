@@ -1,35 +1,35 @@
 public class NewWinnerScreen {
 
-    private Selector  votes;
-    private Printer write;
+    private Selector  selector;
+    private Printer printer;
     private String newWinner;
 
     public NewWinnerScreen(Selector oldVotes)
     {
-        votes = oldVotes;
-        write = new Printer();
+        selector = oldVotes;
+        printer = new Printer();
     }
 
     public String getWinner()
     {
-        newWinner = votes.mostVoted();
+        newWinner = selector.mostVoted();
 
-        votes.pushQueue(newWinner);
+        selector.pushQueue(newWinner);
 
-        votes.cleanList();
+        selector.cleanList();
 
         return newWinner;
     }
 
-    public String[] getOldwinner() { return votes.getWinners(); }
+    public String[] getOldwinner() { return selector.getWinners(); }
 
     public void setWinners(String[] winner) {
-        votes.setWinners(winner);
+        selector.setWinners(winner);
     }
 
     public void setVotes(Selector oldVotes)
     {
-        votes = oldVotes;
+        selector = oldVotes;
     }
 
 }

@@ -14,7 +14,7 @@ public class Ballot {
 
     public String getRestaurant() { return restaurant; }
 
-    public int getVotes_number() { return votes_number;}
+    public int getVotes() { return votes_number;}
 
     public void setVotes_number(int votes_number) { this.votes_number = votes_number; }
 

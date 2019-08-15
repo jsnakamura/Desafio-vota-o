@@ -13,7 +13,7 @@ public class BallotTest {
         ballot.setVotes_number(5);
 
         //Then
-        assertEquals(5,ballot.getVotes_number());
+        assertEquals(5,ballot.getVotes());
     }
 
     @Test
@@ -27,6 +27,6 @@ public class BallotTest {
         ballot.increment();
 
         //THen
-        assertEquals(6, ballot.getVotes_number());
+        assertEquals(6, ballot.getVotes());
     }
 }

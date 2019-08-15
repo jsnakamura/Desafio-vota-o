@@ -1,14 +1,14 @@
 public class NewVoteScreen {
 
-    private Selector  Votes;
-    private Printer write;
-    private Reader rdline;
+    private Selector  selector;
+    private Printer printer;
+    private Reader reader;
 
     public NewVoteScreen(Selector oldVotes)
     {
-        Votes = oldVotes;
-        write = new Printer();
-        rdline = new Reader();
+        selector = oldVotes;
+        printer = new Printer();
+        reader = new Reader();
     }
 
     public int createVote()
@@ -17,23 +17,23 @@ public class NewVoteScreen {
         String name;
         String restaurant;
 
-        write.print("Type your name: ");
-        name = rdline.read();
+        printer.print("Type your name: ");
+        name = reader.read();
 
-        write.print("Type your vote: ");
-        restaurant = rdline.read();
+        printer.print("Type your vote: ");
+        restaurant = reader.read();
 
-        voted = Votes.newVote(name, restaurant);
+        voted = selector.newVote(name, restaurant);
 
         return voted;
     }
 
     public Selector getVotes() {
-        return Votes;
+        return selector;
     }
 
-    public void setVotes(Selector votes) {
-        Votes = votes;
+    public void setVotes(Selector selector) {
+        this.selector = selector;
     }
 
 }

@@ -10,11 +10,7 @@ public class Selector {
     private static final int REPEATED_VOTER = 3;
     private static final int NO_VOTES = 4;
 
-    private String[] Winners;
-
-    /*
-        Votes contém os votos de todos os votos do dia; NÃO PODE CONTER VOTOS ANTIGOS;
-    */
+    private String[] winners;
 
     private ArrayList<Ballot> Votes;
 
@@ -23,12 +19,13 @@ public class Selector {
     public void Selector()
     {
         Votes = new ArrayList<>();
-        Winners = new String[7];
+        winners = new String[7];
 
         for(int i = 0; i < 7; i++)
         {
-            Winners[i] = "";
+            winners[i] = "";
         }
+
     }
 
     //DONE
@@ -78,9 +75,9 @@ public class Selector {
 
         value = 0;
         for(Ballot mBallotIT : counter)
-            if (mBallotIT.getVotes_number() > value)
+            if (mBallotIT.getVotes() > value)
             {
-                value = mBallotIT.getVotes_number();
+                value = mBallotIT.getVotes();
                 mostVoted = mBallotIT.getRestaurant();
             }
 
@@ -98,12 +95,12 @@ public class Selector {
     public int newVote(String name, String restaurant)
     {
 
-        if(!verifyRestaurant(restaurant))
-            return REPEATED_VOTE;
-
         if(!verifyName(name))
             return REPEATED_VOTER;
 
+        if(!verifyRestaurant(restaurant)) {
+            return REPEATED_VOTE;
+        }
 
         Ballot ballot = new Ballot(name, restaurant);
         Votes.add(ballot);
@@ -114,7 +111,7 @@ public class Selector {
     //DONE
     public boolean verifyRestaurant(String restaurant)
     {
-        for(String winner : Winners)
+        for(String winner : winners)
             if (Objects.equals(winner, restaurant))
                 return false;
 
@@ -132,30 +129,27 @@ public class Selector {
     }
 
     //DONE
-    public void setWinners(String[] winners) {
-        Winners = winners;
+    public void pushQueue(String pusher)
+    {
+        for(int j = 0; j < 7; j++)
+        {
+            winners[j] = pusher;
+
+            if(j+1 == 7 )
+                break;
+            else
+                pusher = winners[j+1];
+        }
     }
 
     //DONE
-    public int pushQueue(String pusher)
-    {
-        for(int i = 6; i >=0; i--)
-        {
-            if(i == 0)
-            {
-                Winners[i] = pusher;
-                return SUCCESS;
-            }
-
-            Winners[i] = Winners[i-1];
-        }
-
-        return ERR;
+    public void setWinners(String[] winners) {
+        this.winners = winners;
     }
 
     //DONE
     public String[] getWinners() {
-        return Winners;
+        return winners;
     }
 
 }
