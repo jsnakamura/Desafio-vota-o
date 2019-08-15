@@ -87,8 +87,6 @@ public class SelectorTest {
         Selector selector = new Selector();
 
         //When
-        selector.Selector();
-
         selector.newVote("Juliano", "Sakaes");
         selector.newVote("Lu", "Sakaes");
         selector.newVote("Gui", "Sakaes");
@@ -106,7 +104,7 @@ public class SelectorTest {
         //When
         selector.Selector();
 
-        selector.newVote("Juliano", "ko");
+        selector.newVote("Juliano", "Alien");
         selector.newVote("Lu", "Sakaes");
         selector.newVote("jo", "Alien");
         selector.newVote("Gui", "Sakura");

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="NewVoteScreenTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-15T20:36:58" hostname="JNakamura" time="0.011">
+  <properties/>
+  <testcase name="setVotes" classname="NewVoteScreenTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

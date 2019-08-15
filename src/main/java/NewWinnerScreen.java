@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+
 public class NewWinnerScreen {
 
     private Selector  selector;
-    private Printer printer;
     private String newWinner;
+    private Printer printer;
 
     public NewWinnerScreen(Selector selector)
     {
@@ -30,5 +32,10 @@ public class NewWinnerScreen {
     public void setVotes(Selector selector)
     {
         this.selector = selector;
+    }
+
+    public Selector getVotes()
+    {
+        return selector;
     }
 }

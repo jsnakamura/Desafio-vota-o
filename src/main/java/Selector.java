@@ -5,10 +5,10 @@ import java.util.Objects;
 public class Selector {
 
     private static final int SUCCESS = -1;
-    private static final int ERR = 1;
+
     private static final int REPEATED_VOTE = 2;
     private static final int REPEATED_VOTER = 3;
-    private static final int NO_VOTES = 4;
+
     private static final int MAX_QUEUE = 7;
 
     private String[] winners;
@@ -96,10 +96,10 @@ public class Selector {
     public int newVote(String name, String restaurant)
     {
 
-        if(verifyName(name))
+        if(!verifyName(name))
             return REPEATED_VOTER;
 
-        if(verifyRestaurant(restaurant)) {
+        if(!verifyRestaurant(restaurant)) {
             return REPEATED_VOTE;
         }
 
@@ -114,9 +114,9 @@ public class Selector {
     {
         for(String winner : winners)
             if (Objects.equals(winner, restaurant))
-                return true;
+                return false;
 
-        return false;
+        return true;
     }
 
     //DONE
@@ -124,9 +124,9 @@ public class Selector {
     {
         for(Ballot eachvote : Votes)
             if (Objects.equals(eachvote.getName(), name))
-                return true;
+                return false;
 
-        return false;
+        return true;
     }
 
     //DONE
