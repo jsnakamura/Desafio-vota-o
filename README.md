@@ -36,6 +36,6 @@ Melhorias:
 -------
 
 Há diversas melhorias que poderiam ser implemetada como o uso de Dockers para uma garantia de que o 
-sistema executaria de forma correta em qualquer sistema, uso de Mockit para uma maior gama de testes
+sistema executaria de forma correta em qualquer sistema, uso de Mockito para uma maior gama de testes
 possíveis, uso de um banco de dados real e assim abrindo possibilidade para diversos computadores 
 utilizarem a eleição ao mesmo tempo, implementação de login para garantir unicidade dos votos.
