@@ -8,21 +8,11 @@ public class SelectorTest {
     public void setWinners() {
         //Given
         Selector selector = new Selector();
-        String[] test = new String[7];
-        String[] test2 = new String[7];
-
-        //When
+        String[] test = {"String", "", "", "Ola", "", "", ""};
+        String[] test2 = {"String", "", "", "Ola", "", "", ""};
         selector.Selector();
 
-        for(int i = 0; i < 7; i++) {
-            test[i] = "";
-            test2[i] = "";
-        }
-
-
-        test[0] = "String";
-        test2[0] = "String";
-
+        //When
         selector.setWinners(test);
 
         //Then
@@ -30,7 +20,7 @@ public class SelectorTest {
     }
 
     @Test
-    public void newVote() {
+    public void addNewVote() {
         //Given
         Selector selector = new Selector();
 
@@ -43,8 +33,53 @@ public class SelectorTest {
 
         //Then
         assertEquals(-1, selector.newVote("Carlos", "Sakaes"));
+    }
+
+    @Test
+    public void voteOnPastWinner() {
+        //Given
+        Selector selector = new Selector();
+
+        //When
+        selector.Selector();
+        selector.pushQueue("Red Velvet");
+
+        selector.newVote("Juliano", "Sakaes");
+        selector.newVote("Antonia", "Sakura");
+
+        //Then
         assertEquals(2, selector.newVote("Fabio", "Red Velvet"));
+    }
+
+    @Test
+    public void repeatVoter() {
+        //Given
+        Selector selector = new Selector();
+
+        //When
+        selector.Selector();
+        selector.pushQueue("Red Velvet");
+
+        selector.newVote("Juliano", "Sakaes");
+        selector.newVote("Antonia", "Sakura");
+
+        //Then
         assertEquals(3, selector.newVote("Juliano", "Enodo"));
+    }
+
+    @Test
+    public void isRepeatVoterIfRepeatVoterAndRestaurant() {
+        //Given
+        Selector selector = new Selector();
+
+        //When
+        selector.Selector();
+        selector.pushQueue("Red Velvet");
+
+        selector.newVote("Juliano", "Sakaes");
+        selector.newVote("Antonia", "Sakura");
+
+        //Then
         assertEquals(3, selector.newVote("Juliano", "Sakaes"));
     }
 
@@ -63,11 +98,10 @@ public class SelectorTest {
 
         //Then
         assertArrayEquals(test, selector.getWinners());
-
     }
 
     @Test
-    public void verifyRestaurant() {
+    public void falseIfContainRestaurant() {
         //Given
         Selector selector = new Selector();
         String[] test = {"titi", "tata", "Hello", "Ok", "Sakaes", "Enodo", ""};
@@ -77,14 +111,28 @@ public class SelectorTest {
         selector.setWinners(test);
 
         //Then
-        assertEquals(true, selector.verifyRestaurant("Sakaes"));
-        assertEquals(false, selector.verifyRestaurant("Hi"));
+        assertEquals(false, selector.verifyRestaurant("Sakaes"));
     }
 
     @Test
-    public void verifyName() {
+    public void trueIfNotContainRestaurant() {
         //Given
         Selector selector = new Selector();
+        String[] test = {"titi", "tata", "Hello", "Ok", "Sakaes", "Enodo", ""};
+
+        //When
+        selector.Selector();
+        selector.setWinners(test);
+
+        //Then
+        assertEquals(true, selector.verifyRestaurant("Hi"));
+    }
+
+    @Test
+    public void falseIfContainName() {
+        //Given
+        Selector selector = new Selector();
+        selector.Selector();
 
         //When
         selector.newVote("Juliano", "Sakaes");
@@ -92,17 +140,31 @@ public class SelectorTest {
         selector.newVote("Gui", "Sakaes");
 
         //Then
-        assertEquals(true, selector.verifyName("Juliano"));
-        assertEquals(false, selector.verifyName("Carlos"));
+        assertEquals(false, selector.verifyName("Juliano"));
+    }
+
+    @Test
+    public void trueIfNotContainName() {
+        //Given
+        Selector selector = new Selector();
+        selector.Selector();
+
+        //When
+        selector.newVote("Juliano", "Sakaes");
+        selector.newVote("Lu", "Sakaes");
+        selector.newVote("Gui", "Sakaes");
+
+        //Then
+        assertEquals(true, selector.verifyName("Carlos"));
     }
 
     @Test
     public void mostVoted() {
         //Given
         Selector selector = new Selector();
+        selector.Selector();
 
         //When
-        selector.Selector();
 
         selector.newVote("Juliano", "Alien");
         selector.newVote("Lu", "Sakaes");
@@ -111,9 +173,26 @@ public class SelectorTest {
         selector.newVote("Shinji", "Alien");
         selector.newVote("Choi", "Sakura");
 
-
         //Then
         assertEquals("Alien", selector.mostVoted());
+    }
 
+    @Test
+    public void onDrawWinsTheFirst() {
+        //Given
+        Selector selector = new Selector();
+        selector.Selector();
+
+        //When
+
+        selector.newVote("Juliano", "Enodo");
+        selector.newVote("Lu", "Sakaes");
+        selector.newVote("Gui", "Sakura");
+        selector.newVote("jo", "Alien");
+        selector.newVote("Shinji", "Alien");
+        selector.newVote("Choi", "Sakura");
+
+        //Then
+        assertEquals("Sakura", selector.mostVoted());
     }
 }

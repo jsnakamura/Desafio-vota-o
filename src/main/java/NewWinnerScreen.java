@@ -4,12 +4,10 @@ public class NewWinnerScreen {
 
     private Selector  selector;
     private String newWinner;
-    private Printer printer;
 
     public NewWinnerScreen(Selector selector)
     {
         this.selector = selector;
-        printer = new Printer();
     }
 
     public String getWinner()

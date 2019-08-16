@@ -20,29 +20,10 @@ public class NewWinnerScreenTest {
 
         //Then
         assertEquals("Sakaes", newScreen.getWinner());
-        assertNotEquals("Cream", newScreen.getWinner());
     }
 
     @Test
-    public void setWinners() {
-        //Given
-        Selector selector = new Selector();
-        selector.Selector();
-
-        //When
-        NewWinnerScreen newScreem = new NewWinnerScreen(selector);
-
-        String[] winners = {"titi", "tata", "Hello", "Ok", "Sakaes", "Enodo", ""};
-        String[] test = {"titi", "tata", "Hello", "Ok", "Sakaes", "Enodo", ""};
-
-        newScreem.setWinners(winners);
-
-        //Then
-        assertArrayEquals(test, newScreem.getOldwinner());
-    }
-
-    @Test
-    public void setVotes() {
+    public void doNotGetWinner() {
         //Given
         Selector selector = new Selector();
 
@@ -56,6 +37,24 @@ public class NewWinnerScreenTest {
         NewWinnerScreen newScreen = new NewWinnerScreen(selector);
 
         //Then
-        assertEquals(selector, newScreen.getVotes());
+        assertNotEquals("Cream", newScreen.getWinner());
+    }
+
+    @Test
+    public void setWinners() {
+        //Given
+        Selector selector = new Selector();
+        selector.Selector();
+        NewWinnerScreen newScreem = new NewWinnerScreen(selector);
+
+        //When
+
+        String[] winners = {"titi", "tata", "Hello", "Ok", "Sakaes", "Enodo", ""};
+        String[] test = {"titi", "tata", "Hello", "Ok", "Sakaes", "Enodo", ""};
+
+        newScreem.setWinners(winners);
+
+        //Then
+        assertArrayEquals(test, newScreem.getOldwinner());
     }
 }

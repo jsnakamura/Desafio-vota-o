@@ -4,11 +4,11 @@ public class NewVoteScreen {
     private Printer printer;
     private Reader reader;
 
-    public NewVoteScreen(Selector oldVotes)
+    public NewVoteScreen(Selector selector, Printer printer, Reader reader)
     {
-        selector = oldVotes;
-        printer = new Printer();
-        reader = new Reader();
+        this.selector = selector;
+        this.printer = printer;
+        this.reader = reader;
     }
 
     public int createVote()
@@ -35,5 +35,4 @@ public class NewVoteScreen {
     public void setVotes(Selector selector) {
         this.selector = selector;
     }
-
 }

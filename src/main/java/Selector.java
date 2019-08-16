@@ -11,7 +11,11 @@ public class Selector {
 
     private static final int MAX_QUEUE = 7;
 
-    private String[] winners;
+//    enum Const {
+//        SUCCESS(1), REPEATED_VOTE(2), REPEATED_VOTER(3), MAX_QUEUE(7)
+//    }
+
+    private String[] winners = {"", "", "", "", "", "", ""};
 
     private ArrayList<Ballot> Votes;
 
@@ -20,13 +24,6 @@ public class Selector {
     public void Selector()
     {
         Votes = new ArrayList<>();
-        winners = new String[MAX_QUEUE];
-
-        for(int i = 0; i < MAX_QUEUE; i++)
-        {
-            winners[i] = "";
-        }
-
     }
 
     //DONE
@@ -55,11 +52,9 @@ public class Selector {
                 for(Ballot jBallotIT : counter)
                     if (key.equals(jBallotIT.getRestaurant())) {
 
-
                         flag = 1;
 
                         jBallotIT.increment();
-
                     }
 
                 if(flag == 0)
@@ -112,6 +107,9 @@ public class Selector {
     //DONE
     public boolean verifyRestaurant(String restaurant)
     {
+        if(restaurant == "")
+            return false;
+
         for(String winner : winners)
             if (Objects.equals(winner, restaurant))
                 return false;
@@ -122,6 +120,9 @@ public class Selector {
     //DONE
     public boolean verifyName(String name)
     {
+        if(name == "")
+            return false;
+
         for(Ballot eachvote : Votes)
             if (Objects.equals(eachvote.getName(), name))
                 return false;
