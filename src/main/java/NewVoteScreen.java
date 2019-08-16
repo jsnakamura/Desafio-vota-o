@@ -25,6 +25,12 @@ public class NewVoteScreen {
 
         voted = selector.newVote(name, restaurant);
 
+        if(name.isEmpty())
+            return 4;
+
+        if(restaurant.isEmpty())
+            return 5;
+
         return voted;
     }
 

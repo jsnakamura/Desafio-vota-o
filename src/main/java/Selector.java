@@ -107,9 +107,6 @@ public class Selector {
     //DONE
     public boolean verifyRestaurant(String restaurant)
     {
-        if(restaurant == "")
-            return false;
-
         for(String winner : winners)
             if (Objects.equals(winner, restaurant))
                 return false;
@@ -120,9 +117,6 @@ public class Selector {
     //DONE
     public boolean verifyName(String name)
     {
-        if(name == "")
-            return false;
-
         for(Ballot eachvote : Votes)
             if (Objects.equals(eachvote.getName(), name))
                 return false;
